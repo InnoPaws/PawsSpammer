@@ -6,9 +6,17 @@ This a simple C# webhook spammer for discord with proxy support
 - [X] Shows Errors
 - [X] Show Proxies
 - [X] Delete Proxy
+- [X] Remove Webhook From listBox2 
 - [X] Add/Remove Webhooks
 - [X] Proxy Fetcher
 - [X] Custom Proxy API  
+- [X] Custom Delay
+- [X] Logs
+
+# Coming Soon
+- [ ] Webhook Deleter
+- [ ] User Agent Spoofing
+- [ ] System Monitor
 
 # Reports
 Virustotal: https://www.virustotal.com/gui/file/94b2fcfa7cdc8cac0f9e99d4763d37647782832ff6ed5a9806c59aac2b73115c?nocache=1
