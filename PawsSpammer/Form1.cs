@@ -102,7 +102,6 @@ namespace PawsSpammer
         {
             if (!isSpamming)
             {
-                // Start spamming
                 if (listBox2.Items.Count == 0)
                 {
                     MessageBox.Show("Add at least one webhook to start spamming.");
@@ -124,7 +123,7 @@ namespace PawsSpammer
                 isSpamming = true;
                 StartAndStopBtn.Text = "Stop";
 
-                await StartSpammingAsync(checkBox1.Checked); // Pass checkBox1.Checked to StartSpammingAsync
+                await StartSpammingAsync(checkBox1.Checked); 
             }
             else
             {
@@ -248,7 +247,6 @@ namespace PawsSpammer
                         catch (Exception ex)
                         {
                             LogsListBox.Items.Add($"Error sending message to {webhook}: {ex.Message}");
-                            // Continue to the next webhook
                         }
                     }
                 }
@@ -269,7 +267,6 @@ namespace PawsSpammer
             {
                 using (var httpClientHandler = new HttpClientHandler())
                 {
-                    // Configure proxy for HttpClientHandler if useProxy is true and proxyUrl is provided
                     if (useProxy && !string.IsNullOrEmpty(proxyUrl))
                     {
                         httpClientHandler.Proxy = new WebProxy(proxyUrl);
@@ -281,13 +278,11 @@ namespace PawsSpammer
                         var jsonContent = JsonConvert.SerializeObject(new { content = message });
                         var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-                        // Set a short timeout for the HTTP request
                         var cancellationTokenSource = new CancellationTokenSource();
                         cancellationTokenSource.CancelAfter(timeoutMilliseconds);
 
                         var response = await client.PostAsync(webhookUrl, content, cancellationTokenSource.Token);
 
-                        // Check response status explicitly
                         if (response.IsSuccessStatusCode)
                         {
                             Invoke((Action)(() =>
@@ -297,7 +292,6 @@ namespace PawsSpammer
                         }
                         else
                         {
-                            // Log HTTP error without throwing exception
                             Invoke((Action)(() =>
                             {
                                 LogsListBox.Items.Add($"HTTP Error {response.StatusCode} for webhook {webhookUrl} via proxy {proxyUrl ?? "Direct"}: {response.ReasonPhrase}");
@@ -308,7 +302,6 @@ namespace PawsSpammer
             }
             catch (OperationCanceledException ex)
             {
-                // Log timeout exception
                 Invoke((Action)(() =>
                 {
                     LogsListBox.Items.Add($"Timeout occurred while sending message to {webhookUrl} via proxy {proxyUrl ?? "Direct"}");
@@ -316,7 +309,6 @@ namespace PawsSpammer
             }
             catch (HttpRequestException ex)
             {
-                // Log HTTP request exceptions
                 Invoke((Action)(() =>
                 {
                     LogsListBox.Items.Add($"HTTP Error: {ex.Message}");
@@ -329,7 +321,6 @@ namespace PawsSpammer
             }
             catch (Exception ex)
             {
-                // Log general exceptions
                 Invoke((Action)(() =>
                 {
                     LogsListBox.Items.Add($"Error occurred: {ex.Message}");
