@@ -25,3 +25,5 @@ Get Visual Studio 2022 or 2019 and install everything afterwards go to .sln proj
 - Virustotal: https://www.virustotal.com/gui/file/94b2fcfa7cdc8cac0f9e99d4763d37647782832ff6ed5a9806c59aac2b73115c?nocache=1
 
 - tria.ge: https://tria.ge/240616-e2b1eazbna
+
+note: it might get detected as agent tesla when compiled idk why it gets detected as that i think its the features such as fetching webhooks and sending messages but it dosent have a rat as you see in the open source idk why tf its getting detected as but when i will come up with a solution to fix this 
