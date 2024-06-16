@@ -1,6 +1,9 @@
 # PawsSpammer
 This a simple C# webhook spammer for discord with proxy support 
 
+# How 2 Build
+Get Visual Studio 2022 or 2019 and install everything afterwards go to .sln project and open it and then right click on Solution and rebuild 
+
 # Features
 - [X] Shows Send Messages
 - [X] Shows Errors
