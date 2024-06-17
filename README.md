@@ -21,9 +21,9 @@ Get Visual Studio 2022 or 2019 and install everything afterwards go to .sln proj
 - [X] User Agent Spoofing
 - [X] System Monitor
 
-# Reports
-- Virustotal: https://www.virustotal.com/gui/file/94b2fcfa7cdc8cac0f9e99d4763d37647782832ff6ed5a9806c59aac2b73115c?nocache=1
+# Reports (UPDATED FOR 2.0)
+- Virustotal: https://www.virustotal.com/gui/file/115e78ea3eb030aac0944185f99525a832b763a9024c49421288b5aeb250dd92?nocache=1
 
-- tria.ge: https://tria.ge/240616-e2b1eazbna
+- tria.ge: https://tria.ge/240617-f1hl8szfrp/behavioral1
 
 note: it might get detected as agent tesla when compiled idk why it gets detected as that i think its the features such as fetching webhooks and sending messages but it dosent have a rat as you see in the open source idk why tf its getting detected as that but i will come up with a solution to fix this 
