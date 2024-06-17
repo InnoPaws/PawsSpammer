@@ -20,6 +20,7 @@ Get Visual Studio 2022 or 2019 and install everything afterwards go to .sln proj
 - [X] Webhook Deleter
 - [X] User Agent Spoofing
 - [X] System Monitor
+- [X] Logs Now have Date and time
 
 # Reports (UPDATED FOR 2.0)
 - Virustotal: https://www.virustotal.com/gui/file/115e78ea3eb030aac0944185f99525a832b763a9024c49421288b5aeb250dd92?nocache=1
