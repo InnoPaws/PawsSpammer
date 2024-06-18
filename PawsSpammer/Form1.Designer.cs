@@ -69,8 +69,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.diskPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.DiskWriteStatusLabel = new System.Windows.Forms.Label();
             this.DiskReadStatusLabel = new System.Windows.Forms.Label();
             this.memPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.totalMemoryLabel = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.MemStatusLabel = new System.Windows.Forms.Label();
             this.cpuPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.cpuStatusLabel = new System.Windows.Forms.Label();
@@ -110,15 +116,11 @@
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.LogsListBox = new System.Windows.Forms.ListBox();
             this.UserAgentPanelElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.DiskWriteStatusLabel = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.cpuElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.MemElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.totalMemoryLabel = new System.Windows.Forms.Label();
+            this.diskPanelElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ClearErrorLogtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ControBoxContainer.SuspendLayout();
             this.ButtonsContainer.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -137,6 +139,7 @@
             this.UserAgentGradientPanel.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.contextMenuStrip4.SuspendLayout();
             this.SuspendLayout();
             // 
             // ControBoxContainer
@@ -147,7 +150,7 @@
             this.ControBoxContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.ControBoxContainer.Location = new System.Drawing.Point(0, 0);
             this.ControBoxContainer.Name = "ControBoxContainer";
-            this.ControBoxContainer.Size = new System.Drawing.Size(593, 30);
+            this.ControBoxContainer.Size = new System.Drawing.Size(611, 30);
             this.ControBoxContainer.TabIndex = 0;
             this.ControBoxContainer.Text = "guna2ContainerControl1";
             // 
@@ -156,7 +159,7 @@
             this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitBtn.FillColor = System.Drawing.Color.White;
             this.ExitBtn.IconColor = System.Drawing.Color.Black;
-            this.ExitBtn.Location = new System.Drawing.Point(547, 0);
+            this.ExitBtn.Location = new System.Drawing.Point(565, 0);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(45, 30);
             this.ExitBtn.TabIndex = 6;
@@ -167,7 +170,7 @@
             this.MaximinizeBtn.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.MaximinizeBtn.FillColor = System.Drawing.Color.White;
             this.MaximinizeBtn.IconColor = System.Drawing.Color.Black;
-            this.MaximinizeBtn.Location = new System.Drawing.Point(500, 0);
+            this.MaximinizeBtn.Location = new System.Drawing.Point(518, 0);
             this.MaximinizeBtn.Name = "MaximinizeBtn";
             this.MaximinizeBtn.Size = new System.Drawing.Size(45, 30);
             this.MaximinizeBtn.TabIndex = 7;
@@ -178,7 +181,7 @@
             this.MinimizeBtn.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.MinimizeBtn.FillColor = System.Drawing.Color.White;
             this.MinimizeBtn.IconColor = System.Drawing.Color.Black;
-            this.MinimizeBtn.Location = new System.Drawing.Point(453, 0);
+            this.MinimizeBtn.Location = new System.Drawing.Point(471, 0);
             this.MinimizeBtn.Name = "MinimizeBtn";
             this.MinimizeBtn.Size = new System.Drawing.Size(45, 30);
             this.MinimizeBtn.TabIndex = 8;
@@ -370,7 +373,7 @@
             this.ValidPanel.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ValidPanel.Location = new System.Drawing.Point(23, 28);
             this.ValidPanel.Name = "ValidPanel";
-            this.ValidPanel.Size = new System.Drawing.Size(236, 167);
+            this.ValidPanel.Size = new System.Drawing.Size(174, 145);
             this.ValidPanel.TabIndex = 7;
             // 
             // ValidCounts
@@ -379,7 +382,7 @@
             this.ValidCounts.BackColor = System.Drawing.Color.Transparent;
             this.ValidCounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValidCounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.ValidCounts.Location = new System.Drawing.Point(48, 46);
+            this.ValidCounts.Location = new System.Drawing.Point(3, 35);
             this.ValidCounts.Name = "ValidCounts";
             this.ValidCounts.Size = new System.Drawing.Size(69, 73);
             this.ValidCounts.TabIndex = 1;
@@ -396,9 +399,9 @@
             this.InvaildPanel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.InvaildPanel.FillColor3 = System.Drawing.Color.Maroon;
             this.InvaildPanel.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.InvaildPanel.Location = new System.Drawing.Point(265, 28);
+            this.InvaildPanel.Location = new System.Drawing.Point(203, 28);
             this.InvaildPanel.Name = "InvaildPanel";
-            this.InvaildPanel.Size = new System.Drawing.Size(236, 167);
+            this.InvaildPanel.Size = new System.Drawing.Size(174, 145);
             this.InvaildPanel.TabIndex = 8;
             // 
             // ErrorCounts
@@ -407,7 +410,7 @@
             this.ErrorCounts.BackColor = System.Drawing.Color.Transparent;
             this.ErrorCounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorCounts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ErrorCounts.Location = new System.Drawing.Point(49, 46);
+            this.ErrorCounts.Location = new System.Drawing.Point(3, 35);
             this.ErrorCounts.Name = "ErrorCounts";
             this.ErrorCounts.Size = new System.Drawing.Size(69, 73);
             this.ErrorCounts.TabIndex = 2;
@@ -423,9 +426,9 @@
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.Silver;
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Gray;
             this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(22, 226);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(383, 28);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(236, 167);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(174, 145);
             this.guna2CustomGradientPanel1.TabIndex = 11;
             // 
             // ProxyCount
@@ -434,7 +437,7 @@
             this.ProxyCount.BackColor = System.Drawing.Color.Transparent;
             this.ProxyCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProxyCount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ProxyCount.Location = new System.Drawing.Point(49, 46);
+            this.ProxyCount.Location = new System.Drawing.Point(0, 35);
             this.ProxyCount.Name = "ProxyCount";
             this.ProxyCount.Size = new System.Drawing.Size(69, 73);
             this.ProxyCount.TabIndex = 2;
@@ -451,10 +454,10 @@
             this.tabPage4.Controls.Add(this.diskPanel);
             this.tabPage4.Controls.Add(this.memPanel);
             this.tabPage4.Controls.Add(this.cpuPanel);
-            this.tabPage4.Location = new System.Drawing.Point(5, 4);
+            this.tabPage4.Location = new System.Drawing.Point(184, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(549, 431);
+            this.tabPage4.Size = new System.Drawing.Size(388, 431);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             // 
@@ -476,14 +479,14 @@
             this.listBox5.FormattingEnabled = true;
             this.listBox5.Location = new System.Drawing.Point(3, 242);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(543, 186);
+            this.listBox5.Size = new System.Drawing.Size(382, 186);
             this.listBox5.TabIndex = 5;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(384, 17);
+            this.label15.Location = new System.Drawing.Point(395, 17);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(121, 18);
             this.label15.TabIndex = 4;
@@ -493,7 +496,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(224, 17);
+            this.label14.Location = new System.Drawing.Point(235, 17);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 18);
             this.label14.TabIndex = 3;
@@ -503,7 +506,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(61, 17);
+            this.label13.Location = new System.Drawing.Point(72, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 18);
             this.label13.TabIndex = 0;
@@ -519,10 +522,46 @@
             this.diskPanel.FillColor2 = System.Drawing.Color.Silver;
             this.diskPanel.FillColor3 = System.Drawing.Color.DarkGray;
             this.diskPanel.FillColor4 = System.Drawing.Color.DimGray;
-            this.diskPanel.Location = new System.Drawing.Point(366, 38);
+            this.diskPanel.Location = new System.Drawing.Point(377, 38);
             this.diskPanel.Name = "diskPanel";
             this.diskPanel.Size = new System.Drawing.Size(174, 145);
             this.diskPanel.TabIndex = 2;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(10, 57);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(139, 25);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Disk Writing";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(10, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 25);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Disk Reading";
+            // 
+            // DiskWriteStatusLabel
+            // 
+            this.DiskWriteStatusLabel.AutoSize = true;
+            this.DiskWriteStatusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DiskWriteStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiskWriteStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.DiskWriteStatusLabel.Location = new System.Drawing.Point(3, 88);
+            this.DiskWriteStatusLabel.Name = "DiskWriteStatusLabel";
+            this.DiskWriteStatusLabel.Size = new System.Drawing.Size(25, 25);
+            this.DiskWriteStatusLabel.TabIndex = 3;
+            this.DiskWriteStatusLabel.Text = "0";
             // 
             // DiskReadStatusLabel
             // 
@@ -546,10 +585,46 @@
             this.memPanel.FillColor2 = System.Drawing.Color.DarkGray;
             this.memPanel.FillColor3 = System.Drawing.Color.Silver;
             this.memPanel.FillColor4 = System.Drawing.Color.DimGray;
-            this.memPanel.Location = new System.Drawing.Point(186, 38);
+            this.memPanel.Location = new System.Drawing.Point(197, 38);
             this.memPanel.Name = "memPanel";
             this.memPanel.Size = new System.Drawing.Size(174, 145);
             this.memPanel.TabIndex = 1;
+            // 
+            // totalMemoryLabel
+            // 
+            this.totalMemoryLabel.AutoSize = true;
+            this.totalMemoryLabel.BackColor = System.Drawing.Color.Transparent;
+            this.totalMemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalMemoryLabel.ForeColor = System.Drawing.Color.White;
+            this.totalMemoryLabel.Location = new System.Drawing.Point(-1, 29);
+            this.totalMemoryLabel.Name = "totalMemoryLabel";
+            this.totalMemoryLabel.Size = new System.Drawing.Size(30, 31);
+            this.totalMemoryLabel.TabIndex = 8;
+            this.totalMemoryLabel.Text = "0";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(3, 69);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(176, 24);
+            this.label20.TabIndex = 7;
+            this.label20.Text = "Memory Available";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(9, -3);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(155, 25);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Total Memory";
             // 
             // MemStatusLabel
             // 
@@ -570,7 +645,7 @@
             this.cpuPanel.FillColor2 = System.Drawing.Color.DimGray;
             this.cpuPanel.FillColor3 = System.Drawing.Color.Gainsboro;
             this.cpuPanel.FillColor4 = System.Drawing.Color.DarkGray;
-            this.cpuPanel.Location = new System.Drawing.Point(6, 38);
+            this.cpuPanel.Location = new System.Drawing.Point(17, 38);
             this.cpuPanel.Name = "cpuPanel";
             this.cpuPanel.Size = new System.Drawing.Size(174, 145);
             this.cpuPanel.TabIndex = 0;
@@ -596,10 +671,10 @@
             this.tabPage3.Controls.Add(this.fetchButton);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.listBox1);
-            this.tabPage3.Location = new System.Drawing.Point(5, 4);
+            this.tabPage3.Location = new System.Drawing.Point(184, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(549, 431);
+            this.tabPage3.Size = new System.Drawing.Size(388, 431);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
@@ -687,10 +762,10 @@
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Location = new System.Drawing.Point(5, 4);
+            this.tabPage2.Location = new System.Drawing.Point(184, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(549, 431);
+            this.tabPage2.Size = new System.Drawing.Size(388, 431);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -854,10 +929,10 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.InvaildPanel);
             this.tabPage1.Controls.Add(this.ValidPanel);
-            this.tabPage1.Location = new System.Drawing.Point(5, 4);
+            this.tabPage1.Location = new System.Drawing.Point(184, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(549, 431);
+            this.tabPage1.Size = new System.Drawing.Size(388, 431);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -867,7 +942,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(317, 198);
+            this.label12.Location = new System.Drawing.Point(32, 176);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(141, 25);
             this.label12.TabIndex = 14;
@@ -880,9 +955,9 @@
             this.UserAgentGradientPanel.FillColor2 = System.Drawing.Color.Gray;
             this.UserAgentGradientPanel.FillColor3 = System.Drawing.Color.Silver;
             this.UserAgentGradientPanel.FillColor4 = System.Drawing.Color.LightGray;
-            this.UserAgentGradientPanel.Location = new System.Drawing.Point(266, 226);
+            this.UserAgentGradientPanel.Location = new System.Drawing.Point(23, 204);
             this.UserAgentGradientPanel.Name = "UserAgentGradientPanel";
-            this.UserAgentGradientPanel.Size = new System.Drawing.Size(236, 167);
+            this.UserAgentGradientPanel.Size = new System.Drawing.Size(174, 145);
             this.UserAgentGradientPanel.TabIndex = 13;
             // 
             // UserAgentCountLabel
@@ -891,7 +966,7 @@
             this.UserAgentCountLabel.BackColor = System.Drawing.Color.Transparent;
             this.UserAgentCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserAgentCountLabel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.UserAgentCountLabel.Location = new System.Drawing.Point(49, 46);
+            this.UserAgentCountLabel.Location = new System.Drawing.Point(3, 38);
             this.UserAgentCountLabel.Name = "UserAgentCountLabel";
             this.UserAgentCountLabel.Size = new System.Drawing.Size(69, 73);
             this.UserAgentCountLabel.TabIndex = 2;
@@ -903,7 +978,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(91, 198);
+            this.label8.Location = new System.Drawing.Point(419, 1);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 25);
             this.label8.TabIndex = 12;
@@ -915,7 +990,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(296, 0);
+            this.label2.Location = new System.Drawing.Point(198, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(181, 25);
             this.label2.TabIndex = 10;
@@ -927,11 +1002,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(55, 0);
+            this.label1.Location = new System.Drawing.Point(34, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
+            this.label1.Size = new System.Drawing.Size(140, 25);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Send Messages";
+            this.label1.Text = "Output Logs";
             // 
             // guna2TabControl1
             // 
@@ -946,7 +1021,7 @@
             this.guna2TabControl1.Location = new System.Drawing.Point(35, 30);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(558, 439);
+            this.guna2TabControl1.Size = new System.Drawing.Size(576, 439);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -976,7 +1051,7 @@
             this.tabPage5.Location = new System.Drawing.Point(5, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(549, 431);
+            this.tabPage5.Size = new System.Drawing.Size(567, 431);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             // 
@@ -996,7 +1071,7 @@
             this.listBox3.FormattingEnabled = true;
             this.listBox3.Location = new System.Drawing.Point(3, 43);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(543, 212);
+            this.listBox3.Size = new System.Drawing.Size(561, 212);
             this.listBox3.TabIndex = 22;
             // 
             // LogsListBox
@@ -1005,48 +1080,12 @@
             this.LogsListBox.FormattingEnabled = true;
             this.LogsListBox.Location = new System.Drawing.Point(3, 255);
             this.LogsListBox.Name = "LogsListBox";
-            this.LogsListBox.Size = new System.Drawing.Size(543, 173);
+            this.LogsListBox.Size = new System.Drawing.Size(561, 173);
             this.LogsListBox.TabIndex = 21;
             // 
             // UserAgentPanelElipse
             // 
             this.UserAgentPanelElipse.TargetControl = this.UserAgentGradientPanel;
-            // 
-            // DiskWriteStatusLabel
-            // 
-            this.DiskWriteStatusLabel.AutoSize = true;
-            this.DiskWriteStatusLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DiskWriteStatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiskWriteStatusLabel.ForeColor = System.Drawing.Color.White;
-            this.DiskWriteStatusLabel.Location = new System.Drawing.Point(3, 88);
-            this.DiskWriteStatusLabel.Name = "DiskWriteStatusLabel";
-            this.DiskWriteStatusLabel.Size = new System.Drawing.Size(25, 25);
-            this.DiskWriteStatusLabel.TabIndex = 3;
-            this.DiskWriteStatusLabel.Text = "0";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(-3, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(152, 25);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Disk Reading";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(-3, 57);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(139, 25);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Disk Writing";
             // 
             // cpuElipse
             // 
@@ -1056,51 +1095,30 @@
             // 
             this.MemElipse.TargetControl = this.memPanel;
             // 
-            // guna2Elipse1
+            // diskPanelElipse
             // 
-            this.guna2Elipse1.TargetControl = this.diskPanel;
+            this.diskPanelElipse.TargetControl = this.diskPanel;
             // 
-            // label19
+            // contextMenuStrip4
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(0, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(155, 25);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Total Memory";
+            this.contextMenuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ClearErrorLogtoolStripMenuItem1});
+            this.contextMenuStrip4.Name = "contextMenuStrip2";
+            this.contextMenuStrip4.Size = new System.Drawing.Size(150, 26);
             // 
-            // label20
+            // ClearErrorLogtoolStripMenuItem1
             // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(3, 69);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(176, 24);
-            this.label20.TabIndex = 7;
-            this.label20.Text = "Memory Available";
-            // 
-            // totalMemoryLabel
-            // 
-            this.totalMemoryLabel.AutoSize = true;
-            this.totalMemoryLabel.BackColor = System.Drawing.Color.Transparent;
-            this.totalMemoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMemoryLabel.ForeColor = System.Drawing.Color.White;
-            this.totalMemoryLabel.Location = new System.Drawing.Point(-1, 29);
-            this.totalMemoryLabel.Name = "totalMemoryLabel";
-            this.totalMemoryLabel.Size = new System.Drawing.Size(30, 31);
-            this.totalMemoryLabel.TabIndex = 8;
-            this.totalMemoryLabel.Text = "0";
+            this.ClearErrorLogtoolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("ClearErrorLogtoolStripMenuItem1.Image")));
+            this.ClearErrorLogtoolStripMenuItem1.Name = "ClearErrorLogtoolStripMenuItem1";
+            this.ClearErrorLogtoolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ClearErrorLogtoolStripMenuItem1.Text = "Clear ErrorLog";
+            this.ClearErrorLogtoolStripMenuItem1.Click += new System.EventHandler(this.ClearErrorLogtoolStripMenuItem1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 469);
+            this.ClientSize = new System.Drawing.Size(611, 469);
             this.Controls.Add(this.guna2TabControl1);
             this.Controls.Add(this.ButtonsContainer);
             this.Controls.Add(this.ControBoxContainer);
@@ -1138,6 +1156,7 @@
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.contextMenuStrip4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1229,10 +1248,12 @@
         private System.Windows.Forms.Label label18;
         private Guna.UI2.WinForms.Guna2Elipse cpuElipse;
         private Guna.UI2.WinForms.Guna2Elipse MemElipse;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse diskPanelElipse;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label totalMemoryLabel;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
+        private System.Windows.Forms.ToolStripMenuItem ClearErrorLogtoolStripMenuItem1;
     }
 }
 

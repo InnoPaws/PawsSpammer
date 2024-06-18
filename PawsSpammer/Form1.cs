@@ -77,10 +77,12 @@ namespace PawsSpammer
             listBox2.ContextMenuStrip = contextMenuStrip1;
             listBox1.ContextMenuStrip = contextMenuStrip2;
             listBox3.ContextMenuStrip = contextMenuStrip3;
+            LogsListBox.ContextMenuStrip = contextMenuStrip4;
 
             removeProxyToolStripMenuItem.Click += removeProxyToolStripMenuItem_Click;
             removeWebhookToolStripMenuItem.Click += removeWebhookToolStripMenuItem_Click;
             clearOutputToolStripMenuItem.Click += clearOutputToolStripMenuItem_Click;
+            ClearErrorLogtoolStripMenuItem1.Click += ClearErrorLogtoolStripMenuItem1_Click;
         }
         #region User Agent Code
         private static readonly List<string> browsers = new List<string>
@@ -251,6 +253,13 @@ namespace PawsSpammer
             if (listBox3.Items != null) 
             {
                 listBox3.Items.Clear();
+            }
+        }
+        private void ClearErrorLogtoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (LogsListBox.Items != null)
+            {
+                LogsListBox.Items.Clear();
             }
         }
         private void deleteWebhookToolStripMenuItem_Click(object sender, EventArgs e)
