@@ -1,4 +1,4 @@
-# PawsSpammer
+# PawsSpammer (V2.1)
 This a simple C# webhook spammer for discord with proxy support 
 
 # How 2 Build (for people who dont know)
